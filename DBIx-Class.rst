@@ -33,3 +33,34 @@ Me:
 
 Answer:
   DBMS-agnostically, you're kinda fucked there.
+
+Hotspots?
+---------
+
+In a query that did 19794 calls to Row->update
+
+Lost 2 seconds of 22 on this line:
+
+  https://metacpan.org/source/RIBASUSHI/DBIx-Class-0.082840/lib/DBIx/Class/ResultSet.pm#L1329
+
+
+SQL-A::update eats lots:
+
+    # spent 5.82s (824ms+5.00) within SQL::Abstract::update which was called 19794 times, avg 294µs/call:
+
+    # 19794 times (824ms+5.00s) by DBIx::Class::Storage::DBI::_gen_sql_bind at line 1679 of DBIx/Class/Storage/DBI.pm, avg 294µs/call
+
+Lost another 1 here:
+
+  https://metacpan.org/source/ILMARI/SQL-Abstract-1.84/lib/SQL/Abstract.pm#L365
+
+Half a second here:
+
+  https://metacpan.org/source/ILMARI/SQL-Abstract-1.84/lib/SQL/Abstract.pm#L378
+
+2 seconds here:
+
+  https://metacpan.org/source/ILMARI/SQL-Abstract-1.84/lib/SQL/Abstract.pm#L426
+
+
+
