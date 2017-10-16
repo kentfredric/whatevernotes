@@ -58,6 +58,23 @@ Me:
         }
     }
 
+Me:
+
+  *Thinking* maybe it would be useful to have something like:
+
+  .. code:: perl
+
+    my (@results) = $rs->search()->soft_where({ columnname => { '-in' => \@input }  })->all;
+
+  Which would function like a big-assed glorious grep, but also with some scope to optimise/tweak
+  the final query based on the software specification before executed.
+
+  Maybe it could do multi-queries under the hood like I did, or maybe elide parameters from the query
+  itself and just post-filter it, depending on which is more likely to be efficient.
+
+  *thinking* Nah. Too many ways to fuck that up.
+
+
 Hotspots?
 ---------
 
