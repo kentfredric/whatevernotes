@@ -34,6 +34,7 @@ some other field, like, almost like a INNER JOIN, except, instead of being able 
 just <existing> INNER JOIN <input>, well, <input> ain't in the database. What do?
 
 ::
+
   { columnname => { "=" => [ .... ] } } # Computer says no.
   { columnname => { "-in" => [ ... ] } } # Computer say no.
 
