@@ -59,7 +59,6 @@ Me:
     }
 
 Me:
-
   *Thinking* maybe it would be useful to have something like:
 
   .. code:: perl
