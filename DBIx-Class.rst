@@ -24,15 +24,13 @@ Answer::
 Too many SQL variables
 ----------------------
 
-Me::
+Me:
+  Gosh, I have thousands of things I need to query where the given field must match
+  some other field, like, almost like a INNER JOIN, except, instead of being able to
+  just <existing> INNER JOIN <input>, well, <input> ain't in the database. What do?
+ 
+    { columnname => { "=" => [ .... ] } } # Computer says no.
+    { columnname => { "-in" => [ ... ] } } # Computer say no.
 
-> Gosh, I have thousands of things I need to query where the given field must match
-> some other field, like, almost like a INNER JOIN, except, instead of being able to
-> just <existing> INNER JOIN <input>, well, <input> ain't in the database. What do?
-> 
->   { columnname => { "=" => [ .... ] } } # Computer says no.
->   { columnname => { "-in" => [ ... ] } } # Computer say no.
-
-Answer::
-
-> DBMS-agnostically, you're kinda fucked there.
+Answer:
+  DBMS-agnostically, you're kinda fucked there.
