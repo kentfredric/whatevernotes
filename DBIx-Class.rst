@@ -34,6 +34,26 @@ Me:
 Answer:
   DBMS-agnostically, you're kinda fucked there.
 
+Me:
+  This approach works though to significantly reduce the number of queries:
+
+    my (@input) = ...;
+
+    my (%seen) = map { $_ => 0 } @input;
+
+    while ( @input ) {
+
+        # beyond 10 or so the returns diminsh too slowly
+        my (@subset) = splice @input, 0, 20, ();
+
+        my (@results) = $rs->search({ columnname => { '-in' => \@subset }  })->all;
+
+        for my $item (@results) {
+            $seen{ $item->columnname }++;
+            $item->update( stuff );
+        }
+    }
+
 Hotspots?
 ---------
 
