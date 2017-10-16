@@ -37,6 +37,8 @@ Answer:
 Me:
   This approach works though to significantly reduce the number of queries:
 
+  .. code:: perl
+
     my (@input) = ...;
 
     my (%seen) = map { $_ => 0 } @input;
