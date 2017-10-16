@@ -1,8 +1,7 @@
 search vs find
 --------------
 
-Me
-^^
+Me::
 
 > https://metacpan.org/pod/DBIx::Class::ResultSet#search
 >
@@ -12,8 +11,7 @@ Me
 > I Guess that's gonna be a problem if I use anything fancy on my RS,
 >surely, triggers and shit converting input types is what I want?
 
-Answer
-^^^^^^
+Answer::
 
 > No, Find is dog shit, search is better because its dumb.
 >
@@ -26,19 +24,18 @@ Answer
 Too many SQL variables
 ----------------------
 
-Me
-^^
+Me::
 
 > Gosh, I have thousands of things I need to query where the given field must match
 > some other field, like, almost like a INNER JOIN, except, instead of being able to
 > just <existing> INNER JOIN <input>, well, <input> ain't in the database. What do?
-
+>
 > ::
 > 
 >   { columnname => { "=" => [ .... ] } } # Computer says no.
 >   { columnname => { "-in" => [ ... ] } } # Computer say no.
 
-Answer
-^^^^^^
+Answer::
 
+>
 > DBMS-agnostically, you're kinda fucked there.
