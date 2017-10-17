@@ -119,4 +119,28 @@ Me:
 
   ...
 
+Not Me:
+
+  .. code:: perl
+
+    use Moo;
+
+    extends 'DBIx::Class::ResultSet';
+
+    sub BUILDARGS { $_[2] }
+
+    __PACKAGE__->load_components(qw(
+      Helper::ResultSet::Me
+      Helper::ResultSet::OneRow
+      Helper::ResultSet::Shortcut::Limit
+      Helper::ResultSet::Shortcut::OrderBy
+      Helper::ResultSet::Shortcut::Prefetch
+      Helper::ResultSet::CorrelateRelationship
+0    ));
+
+Perl:
+
+  .. code::
+
+    Expected parent constructor of DBIx::Class::Getty::Result to be DBIx::Class::Row, but found DBIx::Class::Helper::Row::StorageValues: changing the inheritance chain (@ISA) at runtime (after lib/DBIx/Class/Getty/Result.pm line 5) is unsupported at /home/torsten/usr/perl520/perl5/lib/perl5/Method/Generate/Constructor.pm line 89.
 
