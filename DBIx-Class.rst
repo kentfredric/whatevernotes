@@ -102,5 +102,21 @@ Half a second here:
 
   https://metacpan.org/source/ILMARI/SQL-Abstract-1.84/lib/SQL/Abstract.pm#L426
 
+ResultSets by the book
+----------------------
+
+Somebody not me:
+
+  https://metacpan.org/pod/DBIx::Class::ResultSet#ResultSet-subclassing-with-Moose-and-similar-constructor-providers
+
+  .. code:: irclog
+
+    <Getty> BUILDARGS did not return a hashref at (eval 742)[/home/torsten/usr/perl520/perl5/lib/perl5/Sub/Quote.pm:3] line 35.
+    <Getty>         DBIx::Class::Getty::ResultSet::new(DBIx::Class::Getty::ResultSet=HASH(0x42b2a90), HASH(0x519d200)) called at t/load.t line 14
+
+
+Me:
+
+  ...
 
 
