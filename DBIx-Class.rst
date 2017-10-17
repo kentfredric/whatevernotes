@@ -106,7 +106,6 @@ ResultSets by the book
 ----------------------
 
 Somebody not me:
-
   https://metacpan.org/pod/DBIx::Class::ResultSet#ResultSet-subclassing-with-Moose-and-similar-constructor-providers
 
   .. code:: irclog
@@ -116,11 +115,9 @@ Somebody not me:
 
 
 Me:
-
   ...
 
 Not Me:
-
   .. code:: perl
 
     use Moo;
@@ -139,7 +136,6 @@ Not Me:
     ));
 
 Perl:
-
   .. code::
 
     Expected parent constructor of DBIx::Class::Getty::Result to be DBIx::Class::Row, but found DBIx::Class::Helper::Row::StorageValues: changing the inheritance chain (@ISA) at runtime (after lib/DBIx/Class/Getty/Result.pm line 5) is unsupported at /home/torsten/usr/perl520/perl5/lib/perl5/Method/Generate/Constructor.pm line 89.
